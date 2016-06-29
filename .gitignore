@@ -1,6 +1,6 @@
 .Rbuildignore
 .Rprofile
-.rpivotTable.Rproj
+.rpivot.Rproj
 .Rproj.user
 .Rhistory
 .DS_Store
