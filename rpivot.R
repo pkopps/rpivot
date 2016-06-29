@@ -13,12 +13,6 @@
 #' @param rendererName List name of the renderer selected, e.g. Table, Heatmap, Treemap etc.
 #' @param sorter String name this allows to implement a javascript function to specify the ad hoc sorting of certain values. See vignette for an example.
 #'              It is especially useful with time divisions like days of the week or months of the year (where the alphabetical order does not work).
-#' @param inclusions List this optional parameter allows to filter the members of a particular dimension "by inclusion". 
-#'              Using the 'Titanic' example, to display only the "Crew" member in the "Class" dimension, it is convenient to filter by inclusion using `inclusions=list(Class="Crew")`.
-#'              Please note that this only pre-selects the visible filter(s) on the pivot table: the other dimension members are still availabe for selection if needed.
-#' @param exclusions String this optional parameter allows to filter the members of a particular dimension "by exclusion". 
-#'              Using the 'Titanic' example, to display only the "1st", "2nd" and "3rd" members in the "Class" dimension, it is convenient to filter by exclusion using `exclusions=list(Class="Crew")`.
-#'              Please note that this only pre-selects the visible filter(s) on the pivot table: the other dimension members are still availabe for selection if needed. 
 #' @param width width parameter
 #' @param height height parameter
 #' 
@@ -36,16 +30,16 @@
 #' 
 #'  # use Titanic dataset provided in base R - simple creation with just data
 #'
-#'  rpivotTable( Titanic ) 
+#'  rpivot( Titanic ) 
 #'
 #'  # prepopulate multiple columns and multiple rows
 #'  
-#'  rpivotTable( Titanic, rows = c("Class","Sex"), cols = c("Age","Survived" ) )
+#'  rpivot( Titanic, rows = c("Class","Sex"), cols = c("Age","Survived" ) )
 #'  
 #'  
 #'  # A more complete example:
 #'  
-#'  rpivotTable(
+#'  rpivot(
 #'  Titanic,
 #'  rows = "Survived",
 #'  cols = c("Class","Sex"),
@@ -53,21 +47,6 @@
 #'  vals = "Freq",
 #'  rendererName = "Table Barchart"
 #'  )
-#'
-#' # An example with inclusions and exclusions filters:
-#' 
-#' rpivotTable(
-#' Titanic,
-#' rows = "Survived",
-#' cols = c("Class","Sex"),
-#' aggregatorName = "Sum as Fraction of Columns",
-#' inclusions = list( Survived = list("Yes")),
-#' exclusions= list( Class = list( "Crew")),
-#' vals = "Freq",
-#' rendererName = "Table Barchart"
-#' )
-#'
-#'
 #'
 #'
 #' @import htmlwidgets
@@ -82,8 +61,6 @@ rpivotTable <- function(
     vals = NULL,
     rendererName = NULL,
     sorter = NULL,
-    exclusions = NULL,
-    inclusions = NULL,
     ...,
     width = NULL,
     height = NULL
@@ -115,11 +92,6 @@ rpivotTable <- function(
       }
       , params
     )
-    # exlusions & inclusions need to be "excluded" from auto_boxing
-  par <- list(
-           exclusions = exclusions,
-           inclusions = inclusions 
-         )
 
 params <- c(params, par)
 
@@ -132,7 +104,7 @@ params <- c(params, par)
     )
 
     htmlwidgets::createWidget(
-      name = 'rpivotTable',
+      name = 'rpivot',
       x,
       width = width,
       height = height,
@@ -154,8 +126,8 @@ params <- c(params, par)
 #' 
 #' 
 #' @export
-rpivotTableOutput <- function(outputId, width = '100%', height = '500px'){
-    shinyWidgetOutput(outputId, 'rpivotTable', width, height, package = 'rpivotTable')
+rpivotOutput <- function(outputId, width = '100%', height = '500px'){
+    shinyWidgetOutput(outputId, 'rpivot', width, height, package = 'rpivotTable')
 }
 
 #' Widget render function for use in Shiny
@@ -177,9 +149,9 @@ rpivotTableOutput <- function(outputId, width = '100%', height = '500px'){
 #' 
 #' 
 #' @export
-renderRpivotTable <- function(expr, env = parent.frame(), quoted = FALSE) {
+renderRpivot <- function(expr, env = parent.frame(), quoted = FALSE) {
     if (!quoted) { expr <- substitute(expr) } # force quoted
-    shinyRenderWidget(expr, rpivotTableOutput, env, quoted = TRUE)
+    shinyRenderWidget(expr, rpivotOutput, env, quoted = TRUE)
 }
 
 
