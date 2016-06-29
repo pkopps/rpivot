@@ -1,5 +1,5 @@
 library(testthat)
-library(rpivotTable)
+library(rpivot)
 
-test_check("rpivotTable")
-# skip_on_cran("rpivotTable")
+test_check("rpivot")
+# skip_on_cran("rpivot")
