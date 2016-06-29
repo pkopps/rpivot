@@ -3,10 +3,11 @@ Title: Build Powerful Pivot Tables and Dynamically Slice & Dice your Data
 Date: 2016-05-10
 Version: 0.1.5.10
 Authors@R: c(
+    person("Patrick", "Kopps"),
     person("Enzo", "Martoglio", role = c("aut", "cre"), comment = "R interface", email = "enzo@smartinsightsfromdata.com"),
     person("Nicolas", "kruchten", role = c("ctb", "cph"), comment = "pivottable library")
     )
-Maintainer: Enzo Martoglio  <enzo@smartinsightsfromdata.com>
+Maintainer: Patrick Koppps  <koppsp@amazon.com>
 Description: Build powerful pivot tables (aka Pivot Grid, Pivot Chart, Cross-
     Tab) and dynamically slice & dice / drag 'n' drop your data. 'rpivotTable' is a
     wrapper of 'pivottable', a powerful open-source Pivot Table library implemented
