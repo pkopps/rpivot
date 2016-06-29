@@ -106,7 +106,7 @@ params <- c(params, par)
       x,
       width = width,
       height = height,
-      package = 'rpivotTable'
+      package = 'rpivot'
     )
 }
 
