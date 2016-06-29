@@ -125,7 +125,7 @@ rpivot <- function(
 #' 
 #' @export
 rpivotOutput <- function(outputId, width = '100%', height = '500px'){
-    shinyWidgetOutput(outputId, 'rpivot', width, height, package = 'rpivotTable')
+    shinyWidgetOutput(outputId, 'rpivot', width, height, package = 'rpivot')
 }
 
 #' Widget render function for use in Shiny
