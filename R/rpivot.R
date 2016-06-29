@@ -91,7 +91,7 @@ rpivot <- function(
       , params
     )
 
-params <- c(params, par)
+# params <- c(params, par)
 
     # remove NULL parameters
     params <- Filter(Negate(is.null), params)
