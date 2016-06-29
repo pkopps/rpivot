@@ -61,7 +61,6 @@ rpivot <- function(
     vals = NULL,
     rendererName = NULL,
     sorter = NULL,
-    ...,
     width = NULL,
     height = NULL
 ) {
@@ -79,8 +78,7 @@ rpivot <- function(
       aggregatorName = aggregatorName,
       vals = vals,
       rendererName = rendererName,
-      sorter = sorter,
-      ...
+      sorter = sorter
     )
 
  #   auto_box vectors of length 1
