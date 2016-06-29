@@ -53,7 +53,7 @@
 #'
 #' @export
 
-rpivotTable <- function(
+rpivot <- function(
     data,
     rows = NULL,
     cols = NULL,
