@@ -1,6 +1,6 @@
 context("creation")
 
-test_that("rpivotTable is right class",{
-  expect_is(rpivotTable(data.frame()),"htmlwidget")
-  expect_is(rpivotTable(data.frame()),"rpivotTable")
+test_that("rpivot is right class",{
+  expect_is(rpivot(data.frame()),"htmlwidget")
+  expect_is(rpivot(data.frame()),"rpivot")
 })
