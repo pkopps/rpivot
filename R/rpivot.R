@@ -62,7 +62,8 @@ rpivot <- function(
     rendererName = NULL,
     sorter = NULL,
     width = NULL,
-    height = NULL
+    height = NULL,
+    ...
 ) {
   # check for data.frame, data.table, or array
   if( length(intersect(class(data),c("data.frame", "data.table", "table","structable", "ftable" ))) == 0 ) {
@@ -78,7 +79,8 @@ rpivot <- function(
       aggregatorName = aggregatorName,
       vals = vals,
       rendererName = rendererName,
-      sorter = sorter
+      sorter = sorter,
+      ...
     )
 
  #   auto_box vectors of length 1
