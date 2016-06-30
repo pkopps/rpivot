@@ -54,6 +54,12 @@ HTMLWidgets.widget({
       if (typeof x.params.onRefresh != "undefined") {
         x.params.onRefresh = x.params.onRefresh[0];
       }
+      
+	var utils = $.pivotUtilities;
+	var heatmap = utils.renderers["Heatmap"];
+	var tableBarChart =  utils.renderers["Table Barchart"];
+	var sum = utils.aggregators["Sum"];
+	var avg = utils.aggregators["Average"]
 	
 	      $('#'+el.id).pivot(
 	      		x.data,
