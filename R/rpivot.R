@@ -59,7 +59,7 @@ rpivot <- function(
     cols = NULL,
     aggregator = NULL,
     renderer = NULL,
-    # aggregatorNamme = NULL,
+    # aggregatorName = NULL,
     # rendererName = NULL,
     vals = NULL,
     sorter = NULL,
