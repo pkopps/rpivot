@@ -25,7 +25,7 @@ HTMLWidgets.widget({
         $.pivotUtilities.d3_renderers,
         $.pivotUtilities.c3_renderers
       );
-      
+      /*
       // temporary hack to make Portuguese d3 and c3 renderers
       if(x.locale === "pt"){
         x.params.renderers["Mapa de Árvore"] = x.params.renderers["Treemap"];
@@ -44,7 +44,7 @@ HTMLWidgets.widget({
         delete(x.params.renderers["Scatter Chart"]);
 
       }
-      
+      */
       if (typeof x.params.sorters != "undefined") {
       if (typeof x.params.sorters[0] == "string") {
           x.params.sorters = eval("("+x.params.sorters[0]+")")
