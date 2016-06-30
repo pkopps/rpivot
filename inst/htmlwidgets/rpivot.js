@@ -55,28 +55,13 @@ HTMLWidgets.widget({
         x.params.onRefresh = x.params.onRefresh[0];
       }
       
-      //var person = {firstName:"John", lastName:"Doe", age:46};
-      
-      /*
-      var functions = {
-	blah: function() { alert("blah"); },
-    	foo: function() { console.log("foo"); }
-	};
-      */
-      
-	var utils = $.pivotUtilities;
-	var heatmap = utils.renderers["Heatmap"];
-	var tableBarChart =  utils.renderers["Table Barchart"];
-	var sum = utils.aggregators["Sum"];
-	var avg = utils.aggregators["Average"]
-	
 	      $('#'+el.id).pivot(
 	      		x.data,
 	      		{    
 	      		rows: x.params.rows,
     			cols: x.params.cols,
-    			aggregator: fun([val])
-    			renderer: renderer
+    			aggregator: $.pivotUtilities.aggregators[x.params.fun]([x.params.val])
+    			renderer: $.pivotUtilities.renderers[x.params.renderer]
 	      		},
 	      		true,
 	      		x.locale
