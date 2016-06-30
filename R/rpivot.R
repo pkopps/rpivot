@@ -79,7 +79,7 @@ rpivot <- function(
     params <- list(
       rows = rows,
       cols = cols,
-      aggregator = aggregator,
+      # aggregator = aggregator,
       renderer = renderer,
       fun = fun, #agg
       val = val, #agg
