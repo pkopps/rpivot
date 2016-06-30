@@ -55,9 +55,12 @@ HTMLWidgets.widget({
         x.params.onRefresh = x.params.onRefresh[0];
       }
       
-      $('#'+el.id).pivot(
-      		x.data, x.params, true, x.locale
-      ); 
+
+        
+	      $('#'+el.id).pivot(
+	      		x.data, x.params, true, x.locale
+	      );
+
 
     },
 
