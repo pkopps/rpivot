@@ -55,7 +55,8 @@ HTMLWidgets.widget({
         x.params.onRefresh = x.params.onRefresh[0];
       }
 	
-
+	var sum =  utils.aggregators["Sum"];
+	
 	      $('#'+el.id).pivot(
 	      		x.data, x.params, true, x.locale
 	      );
