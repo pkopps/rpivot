@@ -14,7 +14,7 @@ HTMLWidgets.widget({
 	    x.data = HTMLWidgets.dataframeToD3(x.data);
 
 	    var derivers = $.pivotUtilities.derivers;
-     	var tpl = $.pivotUtilities.aggregators["Sum"];
+     	var tpl = $.pivotUtilities.aggregators;
       
       // set locale to "en" which is the default for pivottable
       //  this eases code later
