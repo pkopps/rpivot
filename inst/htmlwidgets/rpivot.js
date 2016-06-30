@@ -54,14 +54,14 @@ HTMLWidgets.widget({
       if (typeof x.params.onRefresh != "undefined") {
         x.params.onRefresh = x.params.onRefresh[0];
       }
-
+	var utils = $.pivotUtilities;
 	      $('#'+el.id).pivot(
 	      		x.data,
 	      		{    
 	      		rows: x.params.rows,
     			cols: x.params.cols,
-    			aggregator: $.pivotUtilities.aggregators[x.params.fun]([x.params.val]),
-    			renderer: $.pivotUtilities.renderers[x.params.renderer]
+    			aggregator: utils.aggregators[x.params.fun]([x.params.val]),
+    			renderer: utils.renderers[x.params.renderer]
 	      		},
 	      		true,
 	      		x.locale
