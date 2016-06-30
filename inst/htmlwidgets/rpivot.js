@@ -14,7 +14,7 @@ HTMLWidgets.widget({
 	    x.data = HTMLWidgets.dataframeToD3(x.data);
 
 	    var derivers = $.pivotUtilities.derivers;
-      var tpl = $.pivotUtilities.aggregatorTemplates;
+     	var tpl = $.pivotUtilities.aggregators["Sum"];
       
       // set locale to "en" which is the default for pivottable
       //  this eases code later
@@ -55,12 +55,7 @@ HTMLWidgets.widget({
         x.params.onRefresh = x.params.onRefresh[0];
       }
 	
-	/*      
-	var utils = $.pivotUtilities;
-	var tbc =  utils.renderers["Table Barchart"];
-	var sum =  utils.aggregators["Sum"];
-	var avg =  utils.aggregators["Average"];
-        */
+
 	      $('#'+el.id).pivot(
 	      		x.data, x.params, true, x.locale
 	      );
