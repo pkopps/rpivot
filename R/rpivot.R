@@ -57,10 +57,8 @@ rpivot <- function(
     data,
     rows = NULL,
     cols = NULL,
-    aggregator = list(
-                    fun = NULL,
-                    val = NULL
-                    ),
+    fun = NULL, #agg
+    val = NULL, #agg
     renderer = NULL,
     # aggregatorName = NULL,
     # rendererName = NULL,
@@ -83,6 +81,8 @@ rpivot <- function(
       cols = cols,
       aggregator = aggregator,
       renderer = renderer,
+      fun = fun, #agg
+      val = val, #agg
       # aggregatorName = aggregatorName,
       # rendererName = rendererName,
       # vals = vals,
