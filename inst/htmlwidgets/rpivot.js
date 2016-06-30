@@ -54,26 +54,26 @@ HTMLWidgets.widget({
       if (typeof x.params.onRefresh != "undefined") {
         x.params.onRefresh = x.params.onRefresh[0];
       }
-      /*
+
 	      $('#'+el.id).pivot(
 	      		x.data,
 	      		{    
 	      		rows: x.params.rows,
     			cols: x.params.cols,
-    			aggregator: $.pivotUtilities.aggregators[x.params.fun]([x.params.val])
+    			aggregator: $.pivotUtilities.aggregators[x.params.fun]([x.params.val]),
     			renderer: $.pivotUtilities.renderers[x.params.renderer]
 	      		},
 	      		true,
 	      		x.locale
 	      );
-	   */   
-	      	      $('#'+el.id).pivot(
+	   /*   
+	     	$('#'+el.id).pivot(
 	      		x.data,
 			x.params,
 	      		true,
 	      		x.locale
-	      );
-
+	      	);
+	*/
     },
 
     resize: function(el, width, height, instance) {
