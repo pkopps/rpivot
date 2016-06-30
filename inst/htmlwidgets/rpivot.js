@@ -73,10 +73,11 @@ HTMLWidgets.widget({
 	      $('#'+el.id).pivot(
 	      		x.data,
 	      		{    
-	      		rows: ["sex", "smoker"],
-    			cols: ["day", "time"],
-    			aggregator: avg(["total_bill"]),
-    			renderer: tableBarChart},
+	      		rows: x.params.rows,
+    			cols: x.params.cols,
+    			aggregator: fun([val])
+    			renderer: renderer
+	      		},
 	      		true,
 	      		x.locale
 	      );
