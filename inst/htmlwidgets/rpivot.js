@@ -54,7 +54,7 @@ HTMLWidgets.widget({
       if (typeof x.params.onRefresh != "undefined") {
         x.params.onRefresh = x.params.onRefresh[0];
       }
-      
+      /*
 	      $('#'+el.id).pivot(
 	      		x.data,
 	      		{    
@@ -63,6 +63,13 @@ HTMLWidgets.widget({
     			aggregator: $.pivotUtilities.aggregators[x.params.fun]([x.params.val])
     			renderer: $.pivotUtilities.renderers[x.params.renderer]
 	      		},
+	      		true,
+	      		x.locale
+	      );
+	   */   
+	      	      $('#'+el.id).pivot(
+	      		x.data,
+			x.params,
 	      		true,
 	      		x.locale
 	      );
