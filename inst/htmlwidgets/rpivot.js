@@ -55,6 +55,15 @@ HTMLWidgets.widget({
         x.params.onRefresh = x.params.onRefresh[0];
       }
       
+      //var person = {firstName:"John", lastName:"Doe", age:46};
+      
+      /*
+      var functions = {
+	blah: function() { alert("blah"); },
+    	foo: function() { console.log("foo"); }
+	};
+      */
+      
 	var utils = $.pivotUtilities;
 	var heatmap = utils.renderers["Heatmap"];
 	var tableBarChart =  utils.renderers["Table Barchart"];
@@ -63,7 +72,11 @@ HTMLWidgets.widget({
 	
 	      $('#'+el.id).pivot(
 	      		x.data,
-	      		x.params,
+	      		{    
+	      		rows: ["sex", "smoker"],
+    			cols: ["day", "time"],
+    			aggregator: avg(["total_bill"]),
+    			renderer: tableBarChart},
 	      		true,
 	      		x.locale
 	      );
