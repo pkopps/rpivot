@@ -60,7 +60,8 @@ rpivot <- function(
     aggregator = NULL,
     # aggregatorNamme = NULL,
     vals = NULL,
-    rendererName = NULL,
+    # rendererName = NULL,
+    renderer = NULL,
     sorter = NULL,
     width = NULL,
     height = NULL,
@@ -80,7 +81,8 @@ rpivot <- function(
       aggregator = aggregator,
       # aggregatorName = aggregatorName,
       vals = vals,
-      rendererName = rendererName,
+      # rendererName = rendererName,
+      renderer = renderer,
       sorter = sorter,
       ...
     )
