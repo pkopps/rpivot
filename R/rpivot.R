@@ -89,8 +89,8 @@ rpivot <- function(
       sorter = sorter,
       ...
     )
-
- #   auto_box vectors of length 1
+    
+# auto_box vectors of length 1
     params <- Map( function(p){
         if(length(p) == 1 ){
           p = list(p)
@@ -99,6 +99,12 @@ rpivot <- function(
       }
       , params
     )
+    
+# exlusions & inclusions need to be "excluded" from auto_boxing
+#    par <- list(
+#           exclusions = exclusions,
+#           inclusions = inclusions 
+#         )
 
 # params <- c(params, par)
 
