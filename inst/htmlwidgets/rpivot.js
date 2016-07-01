@@ -61,7 +61,7 @@ HTMLWidgets.widget({
 	      		{    
 	      		rows: x.params.rows,
     			cols: x.params.cols,
-    			aggregator: utils.aggregators[x.params.fun]([x.params.val]),
+    			aggregator: utils.aggregators[x.params.fun]([x.params.vals]),
     			renderer: utils.renderers[x.params.renderer]
 	      		},
 	      		true,
