@@ -14,7 +14,7 @@ HTMLWidgets.widget({
 	    x.data = HTMLWidgets.dataframeToD3(x.data);
 
 	    var derivers = $.pivotUtilities.derivers;
-     	var tpl = $.pivotUtilities.aggregatorTemplates;
+     	//var tpl = $.pivotUtilities.aggregatorTemplates;
       
       // set locale to "en" which is the default for pivottable
       //  this eases code later
@@ -54,6 +54,8 @@ HTMLWidgets.widget({
       if (typeof x.params.onRefresh != "undefined") {
         x.params.onRefresh = x.params.onRefresh[0];
       }
+      
+      var sumOverSum = $.pivotUtilities.aggregatorTemplates;
       
 	var utils = $.pivotUtilities;
 	      $('#'+el.id).pivot(
