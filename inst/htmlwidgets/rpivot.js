@@ -57,6 +57,8 @@ HTMLWidgets.widget({
      
      //(x.params.numberFormat) 
       
+      $(function(){
+      
 	var utils = $.pivotUtilities;
 	      $('#'+el.id).pivot(
 	      		x.data,
@@ -69,6 +71,7 @@ HTMLWidgets.widget({
 	      		true,
 	      		x.locale
 	      );
+    });
 
     },
 
