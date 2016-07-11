@@ -55,7 +55,7 @@ HTMLWidgets.widget({
         x.params.onRefresh = x.params.onRefresh[0];
       }
       
-      var sumOverSum = $.pivotUtilities.aggregatorTemplates;
+      //var sumOverSum = $.pivotUtilities.aggregatorTemplates;
       
 	var utils = $.pivotUtilities;
 	      $('#'+el.id).pivot(
