@@ -54,8 +54,8 @@ HTMLWidgets.widget({
       if (typeof x.params.onRefresh != "undefined") {
         x.params.onRefresh = x.params.onRefresh[0];
       }
-      
-      //var sumOverSum = $.pivotUtilities.aggregatorTemplates;
+     
+     //(x.params.numberFormat) 
       
 	var utils = $.pivotUtilities;
 	      $('#'+el.id).pivot(
@@ -63,7 +63,7 @@ HTMLWidgets.widget({
 	      		{    
 	      		rows: x.params.rows,
     			cols: x.params.cols,
-    			aggregator: utils.aggregators[x.params.funct(x.params.numberFormat)](x.params.vals),
+    			aggregator: utils.aggregators[x.params.funct](x.params.vals),
     			renderer: utils.renderers[x.params.renderer]
 	      		},
 	      		true,
