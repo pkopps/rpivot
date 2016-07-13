@@ -121,7 +121,12 @@ rpivot <- function(
       x,
       width = width,
       height = height,
-      package = 'rpivot'
+      package = 'rpivot',
+        sizingPolicy = htmlwidgets::sizingPolicy(
+            viewer.padding = 0,
+            viewer.paneHeight = 500,
+            browser.fill = TRUE
+        )
     )
 }
 
