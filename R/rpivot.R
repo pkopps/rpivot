@@ -125,7 +125,8 @@ rpivot <- function(
         knitr.figure = FALSE,
         # knitr.defaultWidth = 800,
         # knitr.defaultHeight = 1000
-        defaultHeight = 1200
+        defaultHeight = 1100,
+        knitr.defaultHeight = 1100
         ),
       package = 'rpivot',
 
