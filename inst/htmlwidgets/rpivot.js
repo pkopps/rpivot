@@ -58,8 +58,10 @@ HTMLWidgets.widget({
      //(x.params.numberFormat) 
       
       $(function(){
-      	//var numsAfterDec = numsAfterDec;
+      	
+      	var numsAfterDec = numsAfterDec;
 	var utils = $.pivotUtilities;
+	
 	      $('#'+el.id).pivot(
 	      		x.data,
 	      		{    
