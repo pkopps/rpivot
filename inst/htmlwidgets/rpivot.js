@@ -62,6 +62,12 @@ HTMLWidgets.widget({
       	var numsAfterDec = numsAfterDec;
 	var utils = $.pivotUtilities;
 	
+	var functs = {
+        sumOverSum: $.pivotUtilities.aggregatorTemplates.sumOverSum,
+        sum: $.pivotUtilities.aggregatorTemplates.sum,
+        average: $.pivotUtilities.aggregatorTemplates.average,
+        }
+	
 	      $('#'+el.id).pivot(
 	      		x.data,
 	      		{    
