@@ -66,6 +66,7 @@ rpivot <- function(
     sorter = NULL,
     width = NULL,
     height = NULL,
+    numsAfterDec = NULL,
     ...
 ) {
   # check for data.frame, data.table, or array
@@ -86,6 +87,7 @@ rpivot <- function(
       # aggregatorName = aggregatorName,
       # rendererName = rendererName,
       sorter = sorter,
+      numsAfterDec = numsAfterDec,
       ...
     )
     
