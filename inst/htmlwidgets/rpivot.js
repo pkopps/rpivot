@@ -63,9 +63,9 @@ HTMLWidgets.widget({
 	var utils = $.pivotUtilities;
 	
 	var functs = {
-        sumOverSum: $.pivotUtilities.aggregatorTemplates.sumOverSum,
-        sum: $.pivotUtilities.aggregatorTemplates.sum,
-        average: $.pivotUtilities.aggregatorTemplates.average,
+	        'Sum over Sum': $.pivotUtilities.aggregatorTemplates.sumOverSum,
+	        Sum: $.pivotUtilities.aggregatorTemplates.sum,
+	        Average: $.pivotUtilities.aggregatorTemplates.average,
         }
 	
 	      $('#'+el.id).pivot(
@@ -74,8 +74,8 @@ HTMLWidgets.widget({
 	      		rows: x.params.rows,
     			cols: x.params.cols,
     			// TESTING aggregator
-    			//aggregator: functs[x.params.funct](utils.numberFormat({digitsAfterDecimal: 2}))(x.params.vals),
-    			aggregator: utils.aggregators[x.params.funct](x.params.vals),
+    			aggregator: functs[x.params.funct](utils.numberFormat({digitsAfterDecimal: 2}))(x.params.vals),
+    			//aggregator: utils.aggregators[x.params.funct](x.params.vals),
     			renderer: utils.renderers[x.params.renderer]
 	      		},
 	      		true,
