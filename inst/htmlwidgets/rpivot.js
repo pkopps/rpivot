@@ -74,7 +74,7 @@ HTMLWidgets.widget({
 	      		rows: x.params.rows,
     			cols: x.params.cols,
     			// TESTING aggregator
-    			aggregator: functs[x.params.funct](utils.numberFormat({digitsAfterDecimal: 2}))(x.params.vals),
+    			aggregator: functs[x.params.funct](utils.numberFormat({digitsAfterDecimal: numsAfterDec}))(x.params.vals),
     			//aggregator: utils.aggregators[x.params.funct](x.params.vals),
     			renderer: utils.renderers[x.params.renderer]
 	      		},
