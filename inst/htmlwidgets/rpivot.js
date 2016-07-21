@@ -59,7 +59,7 @@ HTMLWidgets.widget({
       
       $(function(){
       	
-      	var numsAfterDec = numsAfterDec;
+      	var numsAfterDec = x.params.numsAfterDec;
 	var utils = $.pivotUtilities;
 	
 	var functs = {
