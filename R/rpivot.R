@@ -8,7 +8,7 @@
 #'              the \strong{rows} of the pivot table.
 #' @param cols String name of the column in the data.frame to prepopulate
 #'              the \strong{columns} of the pivot table.
-#' @param aggregator String name of the pivottable.js aggregator from pivotUtilities to prepopulate the pivot table.
+#' @param funct String name of the pivottable.js aggregator from pivotUtilities to prepopulate the pivot table.
 #' @param vals String name of the column in the data.frame to use with \code{aggregatorName}. Must be additive (i.e a number).
 #' @param rendererName List name of the renderer selected, e.g. Table, Heatmap, Treemap etc.
 #' @param sorter String name this allows to implement a javascript function to specify the ad hoc sorting of certain values. See vignette for an example.
