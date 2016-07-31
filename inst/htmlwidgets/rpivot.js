@@ -54,31 +54,17 @@ HTMLWidgets.widget({
       if (typeof x.params.onRefresh != "undefined") {
         x.params.onRefresh = x.params.onRefresh[0];
       }
-     
-     //(x.params.numberFormat) 
       
       $(function(){
       	
-      	//var numsAfterDec = x.params.numsAfterDec;
 	var utils = $.pivotUtilities;
-	
-	/*
-	var functs = {
-	        'Sum over Sum': $.pivotUtilities.aggregatorTemplates.sumOverSum,
-	        Sum: $.pivotUtilities.aggregatorTemplates.sum,
-	        Average: $.pivotUtilities.aggregatorTemplates.average,
-        }
-        */
 	
 	      $('#'+el.id).pivot(
 	      		x.data,
 	      		{    
 	      		rows: x.params.rows,
     			cols: x.params.cols,
-    			// TESTING aggregator
     			aggregator: utils.aggregatorTemplates[x.params.funct](utils.numberFormat(x.params.numberFormat))(x.params.vals),
-    			//aggregator: functs[x.params.funct](utils.numberFormat({digitsAfterDecimal: numsAfterDec}))(x.params.vals),
-    			//aggregator: utils.aggregators[x.params.funct](x.params.vals),
     			renderer: utils.renderers[x.params.renderer]
 	      		},
 	      		true,
