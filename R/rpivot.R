@@ -124,8 +124,8 @@ rpivot <- function(
       height = height,
       sizingPolicy = htmlwidgets::sizingPolicy(
         knitr.figure = FALSE,
-        knitr.defaultHeight = '100%',
-        knitr.defaultWidth = '100%'
+        # knitr.defaultHeight = '100%',
+        # knitr.defaultWidth = '100%'
         ),
       package = 'rpivot'
     )
