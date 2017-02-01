@@ -131,11 +131,11 @@ rpivot <- function(
 # )
       
     htmlwidgets::createWidget(
-      name = 'rpivotTable',
+      name = 'rpivot',
       x,
       width = width,
       height = height,
-      package = 'rpivotTable'
+      package = 'rpivot'
     )
 }
 
