@@ -117,17 +117,25 @@ rpivot <- function(
       params = params
     )
 
+# htmlwidgets::createWidget(
+#   name = 'rpivot',
+#   x,
+#   width = width,
+#   height = height,
+#   sizingPolicy = htmlwidgets::sizingPolicy(
+#     knitr.figure = FALSE,
+#     # knitr.defaultHeight = '100%',
+#     # knitr.defaultWidth = '100%'
+#   ),
+#   package = 'rpivot'
+# )
+      
     htmlwidgets::createWidget(
-      name = 'rpivot',
+      name = 'rpivotTable',
       x,
       width = width,
       height = height,
-      sizingPolicy = htmlwidgets::sizingPolicy(
-        knitr.figure = FALSE,
-        # knitr.defaultHeight = '100%',
-        # knitr.defaultWidth = '100%'
-        ),
-      package = 'rpivot'
+      package = 'rpivotTable'
     )
 }
 
