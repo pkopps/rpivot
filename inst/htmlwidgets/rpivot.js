@@ -66,7 +66,7 @@ HTMLWidgets.widget({
     			cols: x.params.cols,
     			aggregator: utils.aggregatorTemplates[x.params.funct](utils.numberFormat(x.params.numberFormat))(x.params.vals),
     			renderer: utils.renderers[x.params.renderer],
-			sorter: x.params.sorters
+			sorter: ""
 	      		},
 	      		true,
 	      		x.locale
