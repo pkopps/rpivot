@@ -45,9 +45,9 @@ HTMLWidgets.widget({
 
       }
 
-      if (typeof x.params.sorter != "undefined") {
-      if (typeof x.params.sorter[0] == "string") {
-          x.params.sorter = eval("("+x.params.sorter[0]+")")
+      if (typeof x.params.sorters != "undefined") {
+      if (typeof x.params.sorters[0] == "string") {
+          x.params.sorters = eval("("+x.params.sorters[0]+")")
         }
       }
  
@@ -66,7 +66,7 @@ HTMLWidgets.widget({
     			cols: x.params.cols,
     			aggregator: utils.aggregatorTemplates[x.params.funct](utils.numberFormat(x.params.numberFormat))(x.params.vals),
     			renderer: utils.renderers[x.params.renderer],
-			sorters: x.params.sorter
+			sorters: x.params.sorters
 	      		},
 	      		true,
 	      		x.locale
