@@ -44,13 +44,13 @@ HTMLWidgets.widget({
         delete(x.params.renderers["Scatter Chart"]);
 
       }
-/*
+
       if (typeof x.params.sorters != "undefined") {
       if (typeof x.params.sorters[0] == "string") {
           x.params.sorters = eval("("+x.params.sorters[0]+")")
         }
       }
- */   
+ 
       if (typeof x.params.onRefresh != "undefined") {
         x.params.onRefresh = x.params.onRefresh[0];
       }
@@ -66,7 +66,7 @@ HTMLWidgets.widget({
     			cols: x.params.cols,
     			aggregator: utils.aggregatorTemplates[x.params.funct](utils.numberFormat(x.params.numberFormat))(x.params.vals),
     			renderer: utils.renderers[x.params.renderer],
-			sorters: undefined
+			sorters: "undefined"
 	      		},
 	      		true,
 	      		x.locale
