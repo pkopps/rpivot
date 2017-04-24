@@ -44,13 +44,13 @@ HTMLWidgets.widget({
         delete(x.params.renderers["Scatter Chart"]);
 
       }
-
+/*
       if (typeof x.params.sorters != "undefined") {
       if (typeof x.params.sorters[0] == "string") {
           x.params.sorters = eval("("+x.params.sorters[0]+")")
         }
       }
-    
+ */   
       if (typeof x.params.onRefresh != "undefined") {
         x.params.onRefresh = x.params.onRefresh[0];
       }
